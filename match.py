@@ -22,9 +22,7 @@ def get_match_timeline(match_id, headers):
         print('Error:', response.status_code)
         print(response.json())
 
-# Assuming match_timeline is a dictionary or JSON object
 match_timeline = get_match_timeline('BR1_2976813059', headers)
 
-# Write the match_timeline to a JSON file
 with open('Data/timeline.json', 'w') as file:
     json.dump(match_timeline, file, indent=4)

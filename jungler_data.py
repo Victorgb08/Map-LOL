@@ -63,6 +63,6 @@ def extract_positions(data, jungler_team1, jungler_team2):
 # Extrair posições dos junglers
 positions = extract_positions(data, jungler_team1, jungler_team2)
 
-# Opcional: Salvar as informações extraídas em um arquivo JSON
+# Salvar as informações extraídas em um arquivo JSON
 with open('Data/jungler_data.json', 'w') as file:
     json.dump(positions, file, indent=4)

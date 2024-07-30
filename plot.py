@@ -25,7 +25,7 @@ background_image = mpimg.imread('Images/map.png')
 df_team1 = extract_data(data_dict['team1'])
 df_team2 = extract_data(data_dict['team2'])
 
-# Criar o gráfico para o Team 1
+# Criar o gráfico para o Blue Side
 plt.figure(figsize=(12, 8))
 plt.imshow(background_image, extent=[0, 15000, 0, 15000], aspect='auto')
 plt.scatter(df_team1['x'], df_team1['y'], marker='x', label='Posição', color='blue')
@@ -46,7 +46,7 @@ plt.tight_layout(rect=[0, 0, 0.85, 1])  # Ajustar layout para incluir a legenda
 plt.savefig('Jungler Blue Side.png', bbox_inches='tight')
 plt.close()
 
-# Criar o gráfico para o Team 2
+# Criar o gráfico para o Red Side
 plt.figure(figsize=(12, 8))
 plt.imshow(background_image, extent=[0, 15000, 0, 15000], aspect='auto')
 plt.scatter(df_team2['x'], df_team2['y'], marker='x', label='Posição', color='red')
